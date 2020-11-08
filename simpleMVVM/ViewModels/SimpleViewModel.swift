@@ -28,6 +28,7 @@ final class SimpleViewModel: ObservableObject {
     
     // MARK: Output
     @Published private(set) var posts: [Post] = []
+    @Published private(set) var profile: Profile? = nil
     @Published var isErrorShown = false
     @Published var errorMessage = ""
     @Published private(set) var shouldShowIcon = false
@@ -38,14 +39,11 @@ final class SimpleViewModel: ObservableObject {
     
     private var apiService: APIServiceType
     private var tracker: TrackerType
-    private var experimentService: ExperimentServiceType
     
     init(apiService: APIServiceType = APIService(),
-         tracker: TrackerType = Tracker(),
-         experimentService: ExperimentServiceType = ExperimentService()) {
+         tracker: TrackerType = Tracker()) {
         self.apiService = apiService
         self.tracker = tracker
-        self.experimentService = experimentService
         
         self.bindInputs()
         self.bindOutputs()
@@ -77,8 +75,13 @@ final class SimpleViewModel: ObservableObject {
     }
     
     private func bindOutputs() {
-        let repositoriesStream = self.responseSubject
-            .map { $0.posts }.assign(to: \.posts, on: self)
+        let postsStream = self.responseSubject
+            .map { $0.posts }
+            .assign(to: \.posts, on: self)
+        
+        let profileStream = self.responseSubject
+            .map { $0.profile }
+            .assign(to: \.profile, on: self)
         
         let errorMessageStream = self.errorSubject
             .map { error -> String in
@@ -93,17 +96,11 @@ final class SimpleViewModel: ObservableObject {
             .map { _ in true }
             .assign(to: \.isErrorShown, on: self)
         
-        let showIconStream = self.onAppearSubject
-            .map { [experimentService] _ in
-                self.experimentService.experiment(for: .showIcon)
-            }
-            .assign(to: \.shouldShowIcon, on: self)
-        
         cancellables += [
-            repositoriesStream,
+            postsStream,
+            profileStream,
             errorStream,
-            errorMessageStream,
-            showIconStream
+            errorMessageStream
         ]
     }
 }

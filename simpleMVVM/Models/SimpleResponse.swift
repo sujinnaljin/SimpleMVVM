@@ -9,9 +9,9 @@ import Foundation
 import SwiftUI
 
 // MARK: - SimpleResponse
-struct SimpleResponse: Decodable {
+struct SimpleResponse: Codable {
     let posts: [Post]
-//    let profile: Profile
+    let profile: Profile
 }
 
 // MARK: - Post

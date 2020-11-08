@@ -15,7 +15,6 @@
 		E00B2F2A2556B9D1008FFF66 /* APIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B2F292556B9D1008FFF66 /* APIServiceError.swift */; };
 		E00B2F2D2556BD27008FFF66 /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B2F2C2556BD27008FFF66 /* Tracker.swift */; };
 		E00B2F302556BDF5008FFF66 /* SimpleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B2F2F2556BDF5008FFF66 /* SimpleRequest.swift */; };
-		E00B2F362556BE64008FFF66 /* ExperimentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B2F352556BE64008FFF66 /* ExperimentService.swift */; };
 		E00B2F3F2556BEC5008FFF66 /* AnySubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B2F3E2556BEC5008FFF66 /* AnySubscription.swift */; };
 		E00B2F432556C184008FFF66 /* SimpleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B2F422556C184008FFF66 /* SimpleView.swift */; };
 		E00B2F462556C198008FFF66 /* SimpleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B2F452556C198008FFF66 /* SimpleViewModel.swift */; };
@@ -33,7 +32,6 @@
 		E00B2F292556B9D1008FFF66 /* APIServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceError.swift; sourceTree = "<group>"; };
 		E00B2F2C2556BD27008FFF66 /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
 		E00B2F2F2556BDF5008FFF66 /* SimpleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleRequest.swift; sourceTree = "<group>"; };
-		E00B2F352556BE64008FFF66 /* ExperimentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentService.swift; sourceTree = "<group>"; };
 		E00B2F3E2556BEC5008FFF66 /* AnySubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnySubscription.swift; sourceTree = "<group>"; };
 		E00B2F422556C184008FFF66 /* SimpleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleView.swift; sourceTree = "<group>"; };
 		E00B2F452556C198008FFF66 /* SimpleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleViewModel.swift; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 				E00B2F252556B914008FFF66 /* APIService.swift */,
 				E00B2F292556B9D1008FFF66 /* APIServiceError.swift */,
 				E00B2F2C2556BD27008FFF66 /* Tracker.swift */,
-				E00B2F352556BE64008FFF66 /* ExperimentService.swift */,
 				E00B2F532556C5F0008FFF66 /* Request */,
 			);
 			path = Services;
@@ -210,7 +207,6 @@
 				E00B2F2D2556BD27008FFF66 /* Tracker.swift in Sources */,
 				E00B2F4A2556C3CA008FFF66 /* SimpleResponse.swift in Sources */,
 				E00B2F432556C184008FFF66 /* SimpleView.swift in Sources */,
-				E00B2F362556BE64008FFF66 /* ExperimentService.swift in Sources */,
 				E00B2F462556C198008FFF66 /* SimpleViewModel.swift in Sources */,
 				E00B2F302556BDF5008FFF66 /* SimpleRequest.swift in Sources */,
 				E00B2EFB2556A993008FFF66 /* simpleMVVMApp.swift in Sources */,
