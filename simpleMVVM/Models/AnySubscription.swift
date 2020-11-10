@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+//이건 왜 옮겨적으셨죠 승욱님?
 final class AnySubscription: Subscription {
     
     private let cancellable: AnyCancellable
